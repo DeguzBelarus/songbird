@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru-en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Songbird game</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="./assets/images/bird-default-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <script type="module">
+    import header from "./components/header/header.js";
+    import main from "./components/main/main.js";
+    import footer from "./components/footer/footer.js";
+    import birdGuessItem from "./components/birdGuessItem/birdGuessItem.js";
+    import birdsData from "./birds-data.js";
+    import audioPlayer from "./components/audioPlayer/audioPlayer.js";
+    import birdsDataEn from "./birds-data-en.js";
+
+    // store imports
+    import {
+      currentRound,
+      currentPage,
+      currentGuessBird,
+      currentGuessBirdsArray,
+      isGameWon,
+      totalScore,
+      isRoundWon,
+      currentWrongBirdsArray,
+      currentAfterRoundBird,
+      currentAudioPositionIntervalSecond,
+      isRoundStarted,
+      currentAudioPositionIntervalMain,
+      currentLanguage
+    } from "./store.js";
+    // store imports
+
+    header(currentPage[1], currentPage[0], currentLanguage[0]);
+    footer(currentAudioPositionIntervalSecond[1], currentAudioPositionIntervalMain[1]);
+
+    main(
+      birdsData,
+      birdGuessItem,
+      currentPage[0],
+      currentRound[0],
+      currentRound[1],
+      currentGuessBird[0],
+      currentGuessBird[1],
+      currentGuessBirdsArray[0],
+      currentGuessBirdsArray[1],
+      isGameWon[0],
+      totalScore[0],
+      isRoundWon[0],
+      isRoundWon[1],
+      isGameWon[1],
+      currentWrongBirdsArray[0],
+      currentWrongBirdsArray[1],
+      totalScore[0],
+      audioPlayer,
+      birdsDataEn,
+      currentAfterRoundBird[0],
+      currentAfterRoundBird[1],
+      currentAudioPositionIntervalSecond[0],
+      currentAudioPositionIntervalSecond[1],
+      isRoundStarted[0],
+      isRoundStarted[1],
+      currentAudioPositionIntervalMain[0],
+      currentAudioPositionIntervalMain[1],
+      currentLanguage[0],
+      currentLanguage[1],
+      currentPage[1]
+    );
+  </script>
+</body>
+
+</html>

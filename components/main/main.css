@@ -1,0 +1,1816 @@
+/* component root element  */
+main {
+  width: 100%;
+  height: calc(100vh - 40px - 25px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  transform: translateY(40px);
+  position: relative;
+}
+/* component root element  */
+
+/* default page */
+main .language-switch-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 80px;
+  height: 25px;
+  background-color: #fff;
+  color: #888;
+  border: 2px solid yellowgreen;
+  border-radius: 2px;
+  opacity: 0;
+  animation-name: appearing;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.current-language {
+  font-weight: bold;
+  color: yellowgreen;
+}
+
+main .presentation-container {
+  width: 530px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.presentation-container .my-nickname-paragraph {
+  width: 100%;
+  font-family: "Ramus";
+  text-align: center;
+  font-size: 80px;
+  opacity: 0;
+  animation-name: appearing, disappearing;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s, 3.5s;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.presentation-container .rsschool-paragraph {
+  width: 100%;
+  font-family: "Ramus";
+  text-align: center;
+  font-size: 80px;
+  opacity: 0;
+  animation-name: appearing, disappearing;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s, 3.5s;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.presentation-container .presents-paragraph {
+  width: 100%;
+  text-align: center;
+  font-size: 70px;
+  opacity: 0;
+  animation-name: appearing, disappearing;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s, 3.5s;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.presentation-container .game-name-paragraph {
+  width: 100%;
+  text-align: center;
+  font-family: "Ramus";
+  color: yellowgreen;
+  font-size: 90px;
+  opacity: 0;
+  animation-name: appearing;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.presentation-container .game-enter-button {
+  width: 60px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background: rgba(218, 112, 214, 0.4);
+  transition-property: background-color, opacity;
+  transition-timing-function: linear;
+  transition-duration: 0.5s, 1s;
+  border-radius: 50%;
+  opacity: 0;
+  font-family: "Ramus";
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px #aaa, -1px -1px #aaa, 1px -1px #aaa, -1px 1px #aaa;
+  animation-name: appearing, glow-shadow-initial;
+  animation-fill-mode: forwards, none;
+  animation-delay: 0.5s, 0;
+  animation-timing-function: linear;
+  animation-duration: 2s, 4s;
+  animation-iteration-count: 1, infinite;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .game-enter-button:hover {
+    background: rgba(128, 128, 0, 0.4);
+    box-shadow: 0px 0px 45px 0px olive;
+    animation-name: appearing, glow-shadow-hovered;
+    animation-duration: 2s, 1s;
+  }
+}
+
+@keyframes appearing {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes disappearing {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes glow-shadow-initial {
+  0% {
+    box-shadow: 0px 0px 10px 0px orchid;
+  }
+  50% {
+    box-shadow: 0px 0px 55px 0px orchid;
+  }
+  100% {
+    box-shadow: 0px 0px 10px 0px orchid;
+  }
+}
+
+@keyframes glow-shadow-hovered {
+  0% {
+    box-shadow: 0px 0px 10px 0px olive;
+  }
+  50% {
+    box-shadow: 0px 0px 45px 0px olive;
+  }
+  100% {
+    box-shadow: 0px 0px 10px 0px olive;
+  }
+}
+/* default page */
+
+/* gallery page */
+main .gallery-wrapper {
+  width: 1200px;
+  height: 600px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  overflow-y: scroll;
+}
+
+.gallery-wrapper::-webkit-scrollbar {
+  width: 4px;
+}
+
+.gallery-wrapper::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.gallery-wrapper::-webkit-scrollbar-thumb {
+  width: 5px;
+  background-color: yellowgreen;
+  outline: 1.5px solid yellowgreen;
+  border-radius: 5px;
+}
+
+.gallery-wrapper .birds-group-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.birds-group-block .group-header {
+  width: 100%;
+  text-align: center;
+}
+
+.birds-group-block .birds-wrapper {
+  width: 100%;
+  height: 600px;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.birds-wrapper .bird-item {
+  width: 49%;
+  height: 200px;
+  min-height: 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid #000;
+}
+
+.bird-item .poster-image {
+  width: auto;
+  height: 150px;
+  min-height: 150px;
+  margin-right: 10px;
+}
+
+.bird-item .play-pause-icon {
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.bird-item .name-description {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.name-description .bird-item-name {
+  width: 100%;
+  text-align: center;
+}
+
+.name-description .bird-description-paragraph {
+  width: 100%;
+}
+/* gallery page */
+
+/* result page */
+main .result-wrapper {
+  width: 1200px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.result-wrapper .greetings-paragraph {
+  font-weight: bold;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+/* result page */
+
+/* quiz page */
+main .quiz-wrapper {
+  width: 1200px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.quiz-wrapper .categories-container {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+}
+
+.categories-container .category-block {
+  width: 16%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #bbb;
+}
+
+.current-category {
+  color: orchid !important;
+  font-weight: bold;
+}
+
+.quiz-wrapper .upper-container {
+  width: 100%;
+  height: 250px;
+  min-height: 250px;
+  display: flex;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+}
+
+.upper-container .guess-bird-poster-container {
+  width: 22%;
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.guess-bird-poster-container .bird-poster-default {
+  width: auto;
+  height: 100%;
+  min-height: 100%;
+}
+
+.upper-container .player-big-container {
+  width: 78%;
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.player-big-container .score-span {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #999;
+  font-weight: bold;
+}
+
+.player-big-container .hidden-name-paragraph {
+  width: 100%;
+  padding-left: 5px;
+  margin-top: 5px;
+  font-size: 18px;
+  color: yellowgreen;
+  font-weight: bold;
+}
+
+.quiz-wrapper .lower-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border: 1px solid #e0e0e0;
+}
+
+.lower-container .guess-items-container {
+  width: 55%;
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #fff;
+}
+
+.lower-container .guess-preview-container {
+  width: calc(45% + 1px);
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+}
+
+.guess-preview-container.game-in-progress {
+  align-items: flex-start;
+  padding: 5px;
+}
+
+.guess-preview-container .propose-header {
+  width: 100%;
+  padding: 0 50px;
+  color: olive;
+  text-align: center;
+}
+
+.guess-preview-container .poster-description-wrapper {
+  width: 100%;
+  height: 180px;
+  min-height: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.poster-description-wrapper .name-description-wrapper {
+  width: 100%;
+  height: 96%;
+  display: flex;
+  flex-direction: column;
+}
+
+.poster-description-wrapper .bird-preview-poster {
+  width: auto;
+  height: 96%;
+}
+
+.name-description-wrapper .bird-preview-name {
+  width: auto;
+  color: yellowgreen;
+}
+
+.name-description-wrapper .bird-preview-description {
+  width: auto;
+}
+
+.guess-preview-container .mini-player-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+@keyframes central-logo0appearing {
+  100% {
+    opacity: 1;
+  }
+}
+
+.next-restart-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.new-game-button {
+  width: 120px;
+  height: 25px;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 3px;
+  font-weight: bold;
+  margin-top: 10px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  transition-property: color, background-color;
+  transition-timing-function: linear;
+  transition-duration: 0.3s;
+}
+
+.new-game-button:not(:disabled) {
+  background-color: #707d9d;
+}
+
+.new-game-button:disabled {
+  cursor: default;
+  color: #555 !important;
+  font-weight: normal !important;
+  background-color: #333;
+}
+
+.next-round-button {
+  width: 800px;
+  height: 25px;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 3px;
+  font-weight: bold;
+  margin-top: 10px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  transition-property: color, background-color;
+  transition-timing-function: linear;
+  transition-duration: 0.3s;
+}
+
+.next-round-button:not(:disabled) {
+  background-color: #707d9d !important;
+}
+
+.next-round-button:disabled {
+  cursor: default;
+  color: #999 !important;
+  font-weight: normal !important;
+  background-color: #fff;
+}
+/* quiz page */
+
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  /* quiz page */
+  main {
+    overflow: hidden;
+  }
+
+  main .quiz-wrapper {
+    width: 99%;
+    height: 550px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+  }
+
+  .quiz-wrapper .categories-container {
+    width: 100%;
+    height: 75px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid #e0e0e0;
+  }
+
+  .categories-container .category-block {
+    width: 49%;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  .quiz-wrapper .upper-container {
+    width: 100%;
+    height: 180px;
+    min-height: 200px;
+    border: 1px solid #e0e0e0;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  .upper-container .guess-bird-poster-container {
+    width: 100%;
+    height: 100%;
+    min-height: 100px;
+    max-height: 100px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .guess-bird-poster-container .bird-poster-default {
+    width: auto;
+    height: 100%;
+    min-height: 100px;
+    max-height: 100px;
+  }
+
+  .upper-container .player-big-container {
+    width: 100%;
+    height: 80px;
+    min-height: 80px;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .player-big-container .score-span {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 15px;
+    z-index: 1;
+  }
+
+  .player-big-container .hidden-name-paragraph {
+    width: 100%;
+    padding-left: 5px;
+    margin-top: 5px;
+    font-size: 15px;
+    z-index: 1;
+  }
+
+  .quiz-wrapper .lower-container {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+  }
+
+  .lower-container .guess-items-container {
+    width: 23%;
+    height: 100%;
+    min-height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #fff;
+  }
+
+  .lower-container .guess-preview-container {
+    width: calc(78% + 1px);
+    height: 100%;
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+  }
+
+  .guess-preview-container.game-in-progress {
+    align-items: flex-start;
+    padding: 5px;
+  }
+
+  .guess-preview-container .propose-header {
+    width: 100%;
+    padding: 0 20px;
+    font-size: 16px;
+  }
+
+  .guess-preview-container .poster-description-wrapper {
+    width: 100%;
+    height: 190px;
+    min-height: 180px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .poster-description-wrapper .name-description-wrapper {
+    width: 100%;
+    height: 72%;
+    flex-direction: column;
+  }
+
+  .poster-description-wrapper .bird-preview-poster {
+    width: auto;
+    height: 28%;
+    margin-top: 30px;
+  }
+
+  .name-description-wrapper .bird-preview-name {
+    width: auto;
+    font-size: 12px;
+  }
+
+  .name-description-wrapper .bird-preview-description {
+    width: auto;
+    height: auto;
+    font-size: 10px;
+    z-index: 1;
+  }
+
+  .guess-preview-container .mini-player-wrapper {
+    width: 100%;
+    height: 100%;
+    transform: translateY(-27px);
+  }
+
+  .next-restart-wrapper {
+    gap: 5px;
+  }
+
+  .new-game-button {
+    width: 120px;
+    height: 20px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+
+  .next-round-button {
+    width: 190px;
+    height: 20px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  /* quiz page */
+
+  /* default page */
+  main .language-switch-button {
+    top: 0;
+    right: 5px;
+    width: 70px;
+    height: 20px;
+    font-size: 13px;
+  }
+
+  main .presentation-container {
+    width: 280px;
+    height: 135px;
+  }
+
+  .presentation-container .my-nickname-paragraph {
+    font-size: 40px;
+  }
+
+  .presentation-container .rsschool-paragraph {
+    font-size: 40px;
+  }
+
+  .presentation-container .presents-paragraph {
+    font-size: 35px;
+  }
+
+  .presentation-container .game-name-paragraph {
+    font-size: 50px;
+  }
+
+  .presentation-container .game-enter-button {
+    width: 40px;
+    height: 60px;
+    font-size: 9px;
+  }
+  /* default page */
+
+  /* gallery page */
+  main .gallery-wrapper {
+    width: 100%;
+    height: 498px;
+    min-height: 498px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    overflow-y: scroll;
+  }
+
+  .gallery-wrapper::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .gallery-wrapper::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+
+  .gallery-wrapper::-webkit-scrollbar-thumb {
+    width: 5px;
+    background-color: yellowgreen;
+    outline: 1.5px solid yellowgreen;
+    border-radius: 5px;
+  }
+
+  .gallery-wrapper .birds-group-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 24px;
+  }
+
+  .birds-group-block .group-header {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .birds-group-block .birds-wrapper {
+    width: 100%;
+    height: 1620px;
+    min-height: 1620px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .birds-wrapper .bird-item {
+    width: 99%;
+    height: 270px;
+    min-height: 270px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #000;
+  }
+
+  .bird-item .poster-image {
+    width: auto;
+    height: 77px;
+    min-height: 77px;
+    margin-right: 7px;
+  }
+
+  .bird-item .play-pause-icon {
+    width: 26px;
+    height: 26px;
+    margin-left: 4px;
+    cursor: pointer;
+  }
+
+  .bird-item .name-description {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name-description .bird-item-name {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .name-description .bird-description-paragraph {
+    width: 100%;
+    font-size: 13px;
+  }
+  /* gallery page */
+
+  /* result page */
+  main .result-wrapper {
+    width: 95%;
+    height: 498px;
+    position: relative;
+    border: 1px solid #e0e0e0;
+  }
+
+  .result-wrapper .greetings-paragraph {
+    text-align: center;
+    font-size: 13.5px;
+    font-weight: bold;
+  }
+  /* result page */
+}
+
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  /* quiz page */
+  main {
+    overflow: hidden;
+  }
+
+  main .quiz-wrapper {
+    width: 99%;
+    height: 550px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+  }
+
+  .quiz-wrapper .categories-container {
+    width: 100%;
+    height: 75px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid #e0e0e0;
+  }
+
+  .categories-container .category-block {
+    width: 49%;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  .quiz-wrapper .upper-container {
+    width: 100%;
+    height: 180px;
+    min-height: 200px;
+    border: 1px solid #e0e0e0;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  .upper-container .guess-bird-poster-container {
+    width: 100%;
+    height: 100%;
+    min-height: 100px;
+    max-height: 100px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .guess-bird-poster-container .bird-poster-default {
+    width: auto;
+    height: 100%;
+    min-height: 100px;
+    max-height: 100px;
+  }
+
+  .upper-container .player-big-container {
+    width: 100%;
+    height: 80px;
+    min-height: 80px;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .player-big-container .score-span {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 15px;
+  }
+
+  .player-big-container .hidden-name-paragraph {
+    width: 100%;
+    padding-left: 5px;
+    margin-top: 5px;
+    font-size: 15px;
+    z-index: 1;
+  }
+
+  .quiz-wrapper .lower-container {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+  }
+
+  .lower-container .guess-items-container {
+    width: 25%;
+    height: 100%;
+    min-height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #fff;
+  }
+
+  .lower-container .guess-preview-container {
+    width: calc(75% + 1px);
+    height: 100%;
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+  }
+
+  .guess-preview-container.game-in-progress {
+    align-items: flex-start;
+    padding: 5px;
+  }
+
+  .guess-preview-container .propose-header {
+    width: 100%;
+    padding: 0 20px;
+    font-size: 16px;
+  }
+
+  .guess-preview-container .poster-description-wrapper {
+    width: 100%;
+    height: 190px;
+    min-height: 180px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .poster-description-wrapper .name-description-wrapper {
+    width: 100%;
+    height: 55%;
+    flex-direction: column;
+  }
+
+  .poster-description-wrapper .bird-preview-poster {
+    width: auto;
+    height: 45%;
+  }
+
+  .name-description-wrapper .bird-preview-name {
+    width: auto;
+    font-size: 13px;
+  }
+
+  .name-description-wrapper .bird-preview-description {
+    width: auto;
+    height: auto;
+    font-size: 13px;
+  }
+
+  .guess-preview-container .mini-player-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .next-restart-wrapper {
+    gap: 10px;
+  }
+
+  .new-game-button {
+    width: 120px;
+    height: 25px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 3px;
+    margin-top: 10px;
+  }
+
+  .next-round-button {
+    width: 235px;
+    height: 25px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 3px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  /* quiz page */
+
+  /* default page */
+  main .language-switch-button {
+    top: 5px;
+    right: 5px;
+    width: 80px;
+    height: 25px;
+    border-radius: 2px;
+    font-size: 14px;
+  }
+
+  main .presentation-container {
+    width: 320px;
+    height: 150px;
+  }
+
+  .presentation-container .my-nickname-paragraph {
+    font-size: 50px;
+  }
+
+  .presentation-container .rsschool-paragraph {
+    font-size: 50px;
+  }
+
+  .presentation-container .presents-paragraph {
+    font-size: 40px;
+  }
+
+  .presentation-container .game-name-paragraph {
+    font-size: 55px;
+  }
+
+  .presentation-container .game-enter-button {
+    width: 45px;
+    height: 65px;
+    font-size: 10px;
+  }
+  /* default page */
+
+  /* gallery page */
+  main .gallery-wrapper {
+    width: 99%;
+    height: 600px;
+    min-height: 600px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    overflow-y: scroll;
+  }
+
+  .gallery-wrapper::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .gallery-wrapper::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+
+  .gallery-wrapper::-webkit-scrollbar-thumb {
+    width: 5px;
+    background-color: yellowgreen;
+    outline: 1.5px solid yellowgreen;
+    border-radius: 5px;
+  }
+
+  .gallery-wrapper .birds-group-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+  }
+
+  .birds-group-block .group-header {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .birds-group-block .birds-wrapper {
+    width: 100%;
+    height: 1800px;
+    min-height: 1800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .birds-wrapper .bird-item {
+    width: 99%;
+    height: 300px;
+    min-height: 300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #000;
+  }
+
+  .bird-item .poster-image {
+    width: auto;
+    height: 100px;
+    min-height: 100px;
+    margin-right: 7px;
+  }
+
+  .bird-item .play-pause-icon {
+    width: 28px;
+    height: 28px;
+    margin-left: 4px;
+    cursor: pointer;
+  }
+
+  .bird-item .name-description {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name-description .bird-item-name {
+    width: 100%;
+    text-align: center;
+  }
+
+  .name-description .bird-description-paragraph {
+    width: 100%;
+    font-size: 14px;
+  }
+  /* gallery page */
+
+  /* result page */
+  main .result-wrapper {
+    width: 99%;
+    height: 600px;
+    position: relative;
+    border: 1px solid #e0e0e0;
+  }
+
+  .result-wrapper .greetings-paragraph {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  /* result page */
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* quiz page */
+  main .quiz-wrapper {
+    width: 98%;
+    height: 600px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    border: 1px solid #e0e0e0;
+  }
+
+  .quiz-wrapper .categories-container {
+    width: 100%;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+  }
+
+  .categories-container .category-block {
+    width: 15%;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  .quiz-wrapper .upper-container {
+    width: 100%;
+    height: 250px;
+    min-height: 250px;
+    border: 1px solid #e0e0e0;
+  }
+
+  .upper-container .guess-bird-poster-container {
+    width: 30%;
+    height: 100%;
+    min-height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .guess-bird-poster-container .bird-poster-default {
+    width: auto;
+    height: 100%;
+    min-height: 100%;
+  }
+
+  .upper-container .player-big-container {
+    width: 70%;
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .player-big-container .score-span {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+
+  .player-big-container .hidden-name-paragraph {
+    width: 100%;
+    padding-left: 5px;
+    margin-top: 5px;
+    font-size: 18px;
+  }
+
+  .quiz-wrapper .lower-container {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #e0e0e0;
+  }
+
+  .lower-container .guess-items-container {
+    width: 30%;
+    height: 100%;
+    min-height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #fff;
+  }
+
+  .lower-container .guess-preview-container {
+    width: calc(70% + 1px);
+    height: 100%;
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+  }
+
+  .guess-preview-container.game-in-progress {
+    align-items: flex-start;
+    padding: 5px;
+  }
+
+  .guess-preview-container .propose-header {
+    width: 100%;
+    padding: 0 50px;
+  }
+
+  .guess-preview-container .poster-description-wrapper {
+    width: 100%;
+    height: 180px;
+    min-height: 180px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .poster-description-wrapper .name-description-wrapper {
+    width: 100%;
+    height: 96%;
+    flex-direction: column;
+  }
+
+  .poster-description-wrapper .bird-preview-poster {
+    width: auto;
+    height: 92%;
+  }
+
+  .name-description-wrapper .bird-preview-name {
+    width: auto;
+  }
+
+  .name-description-wrapper .bird-preview-description {
+    width: auto;
+  }
+
+  .guess-preview-container .mini-player-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .next-restart-wrapper {
+    gap: 10px;
+  }
+
+  .new-game-button {
+    width: 120px;
+    height: 25px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 3px;
+    margin-top: 10px;
+  }
+
+  .next-round-button {
+    width: 550px;
+    height: 25px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 3px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  /* quiz page */
+
+  /* gallery page */
+  main .gallery-wrapper {
+    width: 98%;
+    height: 780px;
+    min-height: 780px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    overflow-y: scroll;
+  }
+
+  .gallery-wrapper::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .gallery-wrapper::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+
+  .gallery-wrapper::-webkit-scrollbar-thumb {
+    width: 5px;
+    background-color: yellowgreen;
+    outline: 1.5px solid yellowgreen;
+    border-radius: 5px;
+  }
+
+  .gallery-wrapper .birds-group-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 9px;
+  }
+
+  .birds-group-block .group-header {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .birds-group-block .birds-wrapper {
+    width: 100%;
+    height: 900px;
+    min-height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .birds-wrapper .bird-item {
+    width: 49%;
+    height: 300px;
+    min-height: 300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #000;
+  }
+
+  .bird-item .poster-image {
+    width: auto;
+    height: 100px;
+    min-height: 100px;
+    margin-right: 7px;
+  }
+
+  .bird-item .play-pause-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 4px;
+    cursor: pointer;
+  }
+
+  .bird-item .name-description {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name-description .bird-item-name {
+    width: 100%;
+    text-align: center;
+  }
+
+  .name-description .bird-description-paragraph {
+    width: 100%;
+    font-size: 15px;
+  }
+  /* gallery page */
+
+  /* result page */
+  main .result-wrapper {
+    width: 98%;
+    height: 780px;
+    position: relative;
+    border: 1px solid #e0e0e0;
+  }
+
+  .result-wrapper .greetings-paragraph {
+    font-size: 17px;
+    font-weight: bold;
+  }
+  /* result page */
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  /* quiz page */
+  main .quiz-wrapper {
+    width: 98%;
+    height: 600px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    border: 1px solid #e0e0e0;
+  }
+
+  .quiz-wrapper .categories-container {
+    width: 100%;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+  }
+
+  .categories-container .category-block {
+    width: 16%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .quiz-wrapper .upper-container {
+    width: 100%;
+    height: 250px;
+    min-height: 250px;
+    border: 1px solid #e0e0e0;
+  }
+
+  .upper-container .guess-bird-poster-container {
+    width: 22%;
+    height: 100%;
+    min-height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .guess-bird-poster-container .bird-poster-default {
+    width: auto;
+    height: 100%;
+    min-height: 100%;
+  }
+
+  .upper-container .player-big-container {
+    width: 78%;
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .player-big-container .score-span {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+
+  .player-big-container .hidden-name-paragraph {
+    width: 100%;
+    padding-left: 5px;
+    margin-top: 5px;
+    font-size: 18px;
+  }
+
+  .quiz-wrapper .lower-container {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #e0e0e0;
+  }
+
+  .lower-container .guess-items-container {
+    width: 45%;
+    height: 100%;
+    min-height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #fff;
+  }
+
+  .lower-container .guess-preview-container {
+    width: calc(55% + 1px);
+    height: 100%;
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+  }
+
+  .guess-preview-container.game-in-progress {
+    align-items: flex-start;
+    padding: 5px;
+  }
+
+  .guess-preview-container .propose-header {
+    width: 100%;
+    padding: 0 50px;
+  }
+
+  .guess-preview-container .poster-description-wrapper {
+    width: 100%;
+    height: 180px;
+    min-height: 180px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .poster-description-wrapper .name-description-wrapper {
+    width: 100%;
+    height: 96%;
+    flex-direction: column;
+  }
+
+  .poster-description-wrapper .bird-preview-poster {
+    width: auto;
+    height: 96%;
+  }
+
+  .name-description-wrapper .bird-preview-name {
+    width: auto;
+  }
+
+  .name-description-wrapper .bird-preview-description {
+    width: auto;
+  }
+
+  .guess-preview-container .mini-player-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .next-restart-wrapper {
+    gap: 10px;
+  }
+
+  .new-game-button {
+    width: 120px;
+    height: 25px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 3px;
+    margin-top: 10px;
+  }
+
+  .next-round-button {
+    width: 800px;
+    height: 25px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 3px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  /* quiz page */
+
+  /* gallery page */
+  main .gallery-wrapper {
+    width: 98%;
+    height: 600px;
+    min-height: 600px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    overflow-y: scroll;
+  }
+
+  .gallery-wrapper::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .gallery-wrapper::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+
+  .gallery-wrapper::-webkit-scrollbar-thumb {
+    width: 5px;
+    outline: 1.5px solid yellowgreen;
+    border-radius: 5px;
+  }
+
+  .gallery-wrapper .birds-group-block {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .birds-group-block .group-header {
+    width: 100%;
+    text-align: center;
+  }
+
+  .birds-group-block .birds-wrapper {
+    width: 100%;
+    height: 750px;
+    min-height: 750px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .birds-wrapper .bird-item {
+    width: 49%;
+    height: 250px;
+    min-height: 250px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .bird-item .poster-image {
+    width: auto;
+    height: 120px;
+    min-height: 120px;
+    margin-right: 8px;
+  }
+
+  .bird-item .play-pause-icon {
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+
+  .bird-item .name-description {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name-description .bird-item-name {
+    width: 100%;
+    text-align: center;
+  }
+
+  .name-description .bird-description-paragraph {
+    width: 100%;
+  }
+  /* gallery page */
+
+  /* result page */
+  main .result-wrapper {
+    width: 98%;
+    height: 600px;
+    position: relative;
+    border: 1px solid #e0e0e0;
+  }
+
+  .result-wrapper .greetings-paragraph {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  /* result page */
+}
+
+@media screen and (min-width: 1440px) {
+  /* result page */
+  main .result-wrapper {
+    width: 1200px;
+    height: 600px;
+    position: relative;
+    border: 1px solid #e0e0e0;
+  }
+
+  .result-wrapper .greetings-paragraph {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  /* result page */
+}
+
+@media (hover: hover) {
+  .next-round-button:not(:disabled):hover,
+  .new-game-button:not(:disabled):hover {
+    color: #fcf9bf !important;
+  }
+}
